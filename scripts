@@ -1,0 +1,3 @@
+wget http://insideairbnb.com/get-the-data.html -O - | grep -Po '(?<=href=").*united-states.*data*[^"]*' | xargs wget -x -nH --cut-dirs=2 -i 
+
+find . -name '*.gz' -execdir gzip -d {} \;
